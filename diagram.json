@@ -1,15 +1,22 @@
 {
   "nodes": [
-    {"id": "input", "label": "User Input"},
-    {"id": "lang_detect", "label": "Language Detection"},
-    {"id": "entity_recognition", "label": "Entity Recognition"},
-    {"id": "translation", "label": "Translation Engine"},
-    {"id": "output", "label": "Translated Response"}
+    { "id": "input", "label": "User Input (Text/Voice)" },
+    { "id": "lang_detect", "label": "Language Detection" },
+    { "id": "entity_recognition", "label": "Entity Recognition (Names/Places)" },
+    { "id": "translation", "label": "Translation Engine" },
+    { "id": "output", "label": "Translated Response to Concierge" }
   ],
   "edges": [
-    {"from": "input", "to": "lang_detect"},
-    {"from": "lang_detect", "to": "entity_recognition"},
-    {"from": "entity_recognition", "to": "translation"},
-    {"from": "translation", "to": "output"}
+    { "from": "input", "to": "lang_detect" },
+    { "from": "lang_detect", "to": "entity_recognition" },
+    { "from": "entity_recognition", "to": "translation" },
+    { "from": "translation", "to": "output" }
+  ],
+  "workflow": [
+    "Receive text or voice input from tourist",
+    "Detect input language",
+    "Identify and protect names/places/entities",
+    "Translate text into concierge’s language",
+    "Return accurate, context‑preserved response"
   ]
 }
