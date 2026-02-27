@@ -1,1 +1,15 @@
-
+{
+  "nodes": [
+    {"id": "input", "label": "User Input"},
+    {"id": "lang_detect", "label": "Language Detection"},
+    {"id": "entity_recognition", "label": "Entity Recognition"},
+    {"id": "translation", "label": "Translation Engine"},
+    {"id": "output", "label": "Translated Response"}
+  ],
+  "edges": [
+    {"from": "input", "to": "lang_detect"},
+    {"from": "lang_detect", "to": "entity_recognition"},
+    {"from": "entity_recognition", "to": "translation"},
+    {"from": "translation", "to": "output"}
+  ]
+}
